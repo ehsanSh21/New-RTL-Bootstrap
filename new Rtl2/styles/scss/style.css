@@ -1,0 +1,559 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: byekan, sans-serif;
+}
+
+.textPrimary {
+  color: rgb(173, 123, 233);
+}
+
+.myBackground {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: -100;
+}
+
+.myBackground img {
+  width: 100vw;
+  height: 100vh;
+}
+
+#header {
+  background-color: rgb(173, 123, 233);
+  padding-bottom: 0px !important;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.padHeader {
+  padding-top: 40px;
+}
+
+.fixedNav {
+  position: fixed;
+  width: 100%;
+  background-color: rgb(173, 123, 233);
+  z-index: 500;
+}
+
+.banner {
+  padding-bottom: 0px !important;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.navbar-nav .nav-item {
+  padding-left: 30px;
+}
+
+.banner-content {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.btn-round {
+  border-radius: 30px;
+  padding: 10px 60px;
+  color: rgb(173, 123, 233);
+  border: none;
+}
+.btn-round:hover {
+  background-color: rgb(62, 84, 172);
+  color: #fff;
+  transition-duration: 0.2s;
+}
+
+.my-svg {
+  z-index: 10;
+  width: 100vw;
+  position: absolute;
+  bottom: 0px;
+}
+
+.phone-img {
+  height: 600px;
+}
+
+.blueCard {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(173, 123, 233);
+  align-items: center;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+.blueCard:hover .myCircle i {
+  color: rgb(62, 84, 172);
+  transition-duration: 0.2s;
+}
+.blueCard .myCircle {
+  border: none !important;
+}
+
+.forBlueCard {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(173, 123, 233, 0.2);
+  z-index: 400;
+}
+
+.myCircle {
+  height: 85px;
+  width: 85px;
+  border-radius: 50%;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  overflow: hidden;
+  border-width: none;
+  border-style: solid;
+  border-color: rgb(173, 123, 233);
+}
+
+.myCircle i {
+  color: rgb(173, 123, 233);
+}
+
+.phoneCircle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.animatedCircle {
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  border: 4px dashed rgb(173, 123, 233);
+  z-index: 20;
+  position: absolute;
+  -webkit-animation: circle 40s linear infinite;
+          animation: circle 40s linear infinite;
+}
+
+@-webkit-keyframes circle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.myFlex {
+  display: flex;
+  flex-direction: row;
+  overflow-x: hidden;
+}
+
+.flexItems {
+  margin: 30px;
+}
+
+.swiper-slide .blueCard {
+  background-color: #fff;
+  color: black !important;
+}
+
+.whiteCards {
+  background-color: #fff;
+  color: rgb(173, 123, 233);
+  padding: 50px 70px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+}
+
+.whiteCards > * {
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+.crisCard {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.crisCard-top {
+  display: flex;
+  flex-direction: column;
+  background-image: url(photos/forback.jpg);
+  padding: 10px 80px !important;
+  color: rgb(173, 123, 233);
+  width: 100%;
+  overflow: hidden;
+}
+
+.crisCard-top > * {
+  margin-top: 15px;
+}
+
+.crisCard-bot {
+  background-color: rgb(173, 123, 233);
+  padding: 10px 0px !important;
+  color: #fff;
+}
+
+.list-group .list-group-item {
+  background: none !important;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  cursor: pointer;
+}
+
+.swiper-slide-active .blueCard .forBlueCard {
+  background: none !important;
+}
+
+.swiper-slide-active .blueCard {
+  transform: scale(1.1);
+  transform: translateY(-10px);
+}
+
+.swiperContent {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.swiperCard {
+  background-color: rgb(173, 123, 233);
+  color: #fff;
+  font-size: 21px;
+  position: relative;
+  padding: 40px 30px;
+}
+
+.triangle-down {
+  width: 0;
+  height: 0;
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  border-top: 20px solid rgb(173, 123, 233);
+  position: absolute;
+  bottom: -19px;
+}
+
+.SwiperCircle {
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  overflow: hidden;
+  border-width: 3px;
+  border-style: solid;
+  border-color: rgb(173, 123, 233);
+  margin-right: 21px;
+}
+
+.list-group > * {
+  color: #fff;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom-color: #fff;
+}
+
+.crisCard-top-center {
+  position: relative !important;
+}
+
+.rightTop {
+  position: absolute;
+  background-color: rgb(173, 123, 233);
+  transform: rotate(45deg);
+  padding: 6px 40px;
+  width: 200px;
+  top: 0px;
+  right: -65px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.teamCard {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  position: relative;
+}
+.teamCard:hover .personName {
+  color: rgb(62, 84, 172);
+}
+.teamCard:hover .socialTeam {
+  transform: scaleY(1);
+}
+
+.TeamCircle {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  overflow: hidden;
+  border-width: 3px;
+  border-style: solid;
+  border-color: rgb(173, 123, 233);
+}
+
+.mySwiper4 .swiper-wrapper {
+  margin-bottom: 120px;
+}
+
+.personName {
+  color: rgb(173, 123, 233);
+  font-size: 22px;
+  transition-duration: 0.2s;
+}
+
+.socialTeam {
+  position: absolute;
+  height: 40px;
+  width: 100%;
+  background-color: #fff;
+  bottom: -40px;
+  transition-duration: 3s;
+  transition-property: all 3s;
+  transition: all 0.2s ease-in-out;
+  transform-origin: left top;
+  transform: scaleY(0);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-right: 8%;
+  padding-left: 8%;
+}
+
+.socialTeam > * {
+  margin-left: 8%;
+  margin-right: 8%;
+  color: rgb(62, 84, 172);
+  font-size: 20px;
+}
+
+#accordionExample > * {
+  margin-top: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: none;
+}
+
+.accordion-button {
+  background-color: rgb(173, 123, 233) !important;
+}
+
+.accordion-button .collapsed {
+  color: #fff;
+}
+
+.accordion-button {
+  color: #fff;
+}
+
+.accordion-button:not(.collapsed) {
+  color: black;
+  background-color: #f2f2f2 !important;
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(230, 230, 230, 0.7);
+}
+
+#liner {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: rgb(173, 123, 233);
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.appBtn {
+  display: inline-block;
+}
+
+.news-but {
+  background-color: rgb(173, 123, 233);
+  color: #fff !important;
+  padding: 5px 35px;
+}
+
+.mySwiper6 .swiper-wrapper {
+  margin-bottom: 60px;
+}
+
+.swiper-pagination-bullet {
+  width: 18px;
+  height: 13px;
+  border-radius: 35%;
+  transition-duration: 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: rgb(173, 123, 233) !important;
+  transform: scaleX(1.4);
+}
+
+.buttonTex {
+  font-size: 17px;
+  line-height: 20px;
+}
+
+.myInputs {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 2px solid rgb(173, 123, 233);
+  border-radius: none;
+}
+
+footer {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-image: url(photos/footer.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.emailContainer {
+  background-color: #fff;
+  border-radius: 60px;
+  padding: 30px;
+}
+
+.myForm input {
+  background-color: #f5f5f5;
+  border-radius: 30px;
+}
+
+.myForm > * {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.headerText {
+  font-size: 100px;
+}
+
+/*******Section 20****************/
+/*********************/
+#second-sec, #sec-four, #sec-six, #sec-eight, #sec13, #sec16, #sec18 {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+#sec-three, #sec-seven, #sec14, #sec20 {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: none;
+  overflow: hidden;
+}
+
+#sec-five, #sec-twelve {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: rgb(173, 123, 233);
+  overflow: hidden;
+}
+
+#sec17 {
+  padding-top: 80px;
+}
+
+/****************Media Queries*******************/
+@media only screen and (max-width: 520px) {
+  .animatedCircle {
+    height: 410px;
+    width: 410px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .animatedCircle {
+    height: 380px;
+    width: 380px;
+  }
+}
+@media only screen and (max-width: 390px) {
+  .animatedCircle {
+    height: 340px;
+    width: 340px;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .animatedCircle {
+    height: 0px;
+    width: 0px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .crisCard-top {
+    padding: 20px 10px !important;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .crisCard-top {
+    padding: 20px 80px !important;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .headerText {
+    font-size: 85px;
+  }
+}
+@media only screen and (max-width: 409px) {
+  .appBtn {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}
+@media only screen and (max-width: 369px) {
+  .appBtn {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}/*# sourceMappingURL=style.css.map */

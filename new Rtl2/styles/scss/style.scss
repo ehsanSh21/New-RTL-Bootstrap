@@ -1,0 +1,545 @@
+@import "variables";
+@import "mixins";
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    // overflow-x: hidden;
+     font-family: byekan,sans-serif;
+   
+}
+
+.textPrimary{
+    color: $primaryColor;
+}
+.myBackground{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: -100;
+}
+.myBackground img{
+    width: 100vw;
+    height: 100vh;
+                        
+}
+#header{
+    background-color: $primaryColor;
+    padding-bottom: 0px !important;
+    
+}
+.dropdown:hover .dropdown-menu{
+    display: block;
+    
+}
+.padHeader{
+    padding-top: 40px;
+    
+}
+.fixedNav{
+    position:fixed;
+    width: 100%;
+    background-color: $primaryColor;
+    z-index: 500;
+}
+.banner{
+    padding-bottom: 0px !important;
+    overflow-x: hidden;
+    position: relative;
+}
+.navbar-nav .nav-item{
+    padding-left: 30px;
+}
+
+.banner-content{
+    font-size: 20px;
+    line-height: 28px;
+}
+.btn-round{
+    border-radius: 30px;
+    padding: 10px 60px;
+    color: $primaryColor;
+    border: none;
+    &:hover{
+        background-color: $thirdColor;
+    color: $secondaryColor;
+    transition-duration: 0.2s;
+    }
+}
+.my-svg{
+    z-index: 10;
+    width: 100vw;
+    position: absolute;
+    bottom: 0px;
+}
+.phone-img{
+    height: 600px;
+}
+
+.blueCard{
+    display: flex;
+    flex-direction: column;
+    background-color: $primaryColor;
+    align-items: center;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+    &:hover{
+        .myCircle i{
+            color: $thirdColor;
+            transition-duration: 0.2s;
+        }
+    }
+    .myCircle{
+        border: none !important;
+    }
+}
+.forBlueCard{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($primaryColor,0.2);
+    z-index: 400;
+}
+
+.myCircle{
+    @include circleMe(85px,none);
+}
+
+.myCircle i{
+    color: $primaryColor;
+}
+
+.phoneCircle{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+.animatedCircle{
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+  border: 4px dashed $primaryColor;
+      z-index: 20;
+      position: absolute;
+       animation: circle 40s linear infinite;
+  }
+  @keyframes circle{
+    0%{
+      transform:rotate(0deg)
+                
+                ;
+    
+    }
+      100%{
+      transform:rotate(360deg)
+                
+                ;
+    }
+  }
+
+  .myFlex{
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
+}
+
+.flexItems{
+    
+    margin: 30px;
+    
+}
+.swiper-slide .blueCard{
+    background-color: $secondaryColor;
+    color: black !important;
+}
+
+.whiteCards{
+    background-color: $secondaryColor;
+    color: $primaryColor;
+    padding: 50px 70px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+}
+.whiteCards >* {
+    padding-bottom: 10px;
+    width: 100%;
+}
+.crisCard{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-top-right-radius: 15px;
+     border-top-left-radius: 15px;
+}
+
+
+.crisCard-top{
+    display: flex;
+    flex-direction: column;
+    background-image: url(photos/forback.jpg);
+    padding: 10px 80px !important;
+    color: $primaryColor;
+    width: 100%;
+    overflow: hidden;
+}
+
+.crisCard-top > *{
+    margin-top: 15px;
+}
+.crisCard-bot{
+    background-color: $primaryColor;
+    padding: 10px 0px !important;
+    color: $secondaryColor;
+    
+}
+
+
+.list-group .list-group-item{
+    background: none !important;
+}
+
+.swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+    cursor: pointer;
+    }
+
+.swiper-slide-active .blueCard .forBlueCard{
+    background: none !important;
+}
+.swiper-slide-active .blueCard{
+    transform: scale(1.1);
+    
+    transform: translateY(-10px)
+}
+
+.swiperContent{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+.swiperCard{
+    background-color:$primaryColor;
+    color: $secondaryColor;
+    font-size: 21px;
+    position: relative;
+    padding:40px 30px;
+     
+}
+
+.triangle-down {
+	width: 0;
+	height: 0;
+	border-left: 18px solid transparent;
+	border-right: 18px solid transparent;
+	border-top: 20px solid $primaryColor;
+    position: absolute;
+    bottom: -19px;
+    
+}
+
+.SwiperCircle{
+    @include circleMe(55px,3px);
+    margin-right: 21px;
+}
+.list-group > *{
+    color: $secondaryColor;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom-color: $secondaryColor;
+}
+
+.crisCard-top-center{
+    position: relative !important;
+}
+
+.rightTop{
+    position: absolute;
+    background-color: $primaryColor;
+ 
+  transform: rotate(45deg);
+    padding: 6px 40px;
+    width: 200px;
+    top:0px;
+    right: -65px;
+    color: $secondaryColor;
+    font-size: 18px;
+    font-weight: 600;
+
+}
+
+.teamCard{
+    background-color: $secondaryColor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+      padding-top: 30px;
+    padding-bottom: 30px;
+    position: relative;
+    &:hover{
+        .personName{
+            color: $thirdColor;
+        }
+        .socialTeam{
+            transform: scaleY(1);
+      }
+    }
+    
+}
+
+.TeamCircle{  
+    @include circleMe(90px,3px);
+  }
+
+  .mySwiper4 .swiper-wrapper{
+    margin-bottom: 120px;
+}
+
+.personName{
+    color: $primaryColor;
+    font-size: 22px;
+    transition-duration: 0.2s;
+}
+
+
+.socialTeam{
+    position: absolute;
+    height: 40px;
+    width: 100%;
+    background-color: $secondaryColor;
+    bottom: -40px;
+    transition-duration: 3s;
+    transition-property: all 3s;
+    transition: all .2s ease-in-out;
+    transform-origin: left top;
+    transform: scaleY(0);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-right: 8%;
+    padding-left: 8%;
+}
+
+.socialTeam > *{
+    margin-left: 8%;
+    margin-right: 8%;
+    color: $thirdColor;
+    font-size: 20px;
+}
+
+#accordionExample > *{
+    margin-top: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: none;
+  
+}
+.accordion-button{
+    background-color: $primaryColor !important; 
+} 
+
+.accordion-button .collapsed{
+    color: $secondaryColor;
+}
+
+.accordion-button{
+    color: $secondaryColor;
+}
+
+.accordion-button:not(.collapsed){
+    color: black;
+    background-color: #f2f2f2 !important;
+}
+.accordion-button:focus {
+    box-shadow: 0 0 0 .25rem rgba(230, 230, 230,0.7);
+}
+
+#liner{
+    padding-top: 40px;
+   padding-bottom: 40px;
+   background-color: $primaryColor;
+   color: $secondaryColor;
+   font-size: 24px;
+   font-weight: 500;
+}
+.appBtn{
+    display: inline-block;
+}
+.news-but{
+    background-color: $primaryColor;
+    color: $secondaryColor !important;
+    padding: 5px 35px;
+}
+.mySwiper6 .swiper-wrapper{
+    margin-bottom: 60px;
+}
+.swiper-pagination-bullet{
+    width: 18px;
+    height: 13px;
+    border-radius: 35%;
+    transition-duration: 0.3s;
+}
+.swiper-pagination-bullet-active{
+    background-color: $primaryColor !important;
+    transform: scaleX(1.4);
+}
+
+.buttonTex{
+    font-size: 17px;
+    line-height: 20px;
+
+}
+.myInputs{
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid $primaryColor;
+    border-radius: none;
+}
+
+footer{
+    padding-top: 80px;
+   padding-bottom: 80px;
+   background-image: url(photos/footer.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.emailContainer{
+    background-color: $secondaryColor;
+    border-radius: 60px;
+    padding: 30px;
+}
+
+.myForm input{
+    background-color: #f5f5f5;
+    border-radius: 30px;
+}
+.myForm > * {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.headerText{
+    font-size: 100px;
+}
+
+/*******Section 20****************/
+// .nav-tabs{
+//     border-bottom:0;
+//     .nav-link{
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         justify-content: center;
+//         padding: 5px 25px;
+//        p{
+//         margin-bottom: 0;
+//        }
+//     }
+// }
+/*********************/
+
+
+#second-sec,#sec-four, #sec-six, #sec-eight, #sec13,#sec16,#sec18{
+    @include section($secondaryColor);
+    overflow: hidden;
+}
+
+#sec-three, #sec-seven,#sec14,#sec20{
+    @include section(none);
+    overflow: hidden;
+}
+
+#sec-five, #sec-twelve{
+    @include section($primaryColor);
+    overflow: hidden;
+}
+#sec17{
+    padding-top: 80px;
+}
+
+
+/****************Media Queries*******************/
+@media only screen and (max-width: 520px) {
+
+    .animatedCircle{
+      height: 410px;
+      width: 410px;
+        }
+    } 
+    @media only screen and (max-width: 450px) {
+    
+    .animatedCircle{
+      height: 380px;
+      width: 380px;
+        }
+    } 
+    @media only screen and (max-width: 390px) {
+    
+        .animatedCircle{
+          height: 340px;
+          width: 340px;
+            }
+        } 
+    
+        @media only screen and (max-width: 350px) {
+    
+            .animatedCircle{
+              height: 0px;
+              width: 0px;
+                }
+            } 
+        
+    
+    
+    @media only screen and (min-width: 768px) {
+     .crisCard-top{
+        padding: 20px 10px !important;
+    } 
+    } 
+    
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+        .crisCard-top{
+        padding: 20px 80px !important;
+    }
+      
+    } 
+    
+    
+    
+    @media only screen and (max-width: 992px) {
+        .headerText{
+            font-size: 85px;
+        }
+    }
+    @media only screen and (max-width: 409px) {
+        .appBtn{
+            padding-right: 25px;
+            padding-left: 25px;
+        }
+    }
+    @media only screen and (max-width: 369px) {
+        .appBtn{
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+    }
+    
+    
